@@ -3,7 +3,6 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var fs = require('fs');
-const GrassEater = require("./grassEater");
 
 app.use(express.static("."))
 
@@ -73,7 +72,7 @@ function matrixGenerator(matrixSize, grass, grassEater, cow, predator, tuyn, kra
     return matrix
 }
 matrix = matrixGenerator(30, 17, 7, 8, 3, 6, 8, 12, 9)
-io.sockets.emit("send matrix".matrix)
+io.sockets.emit("send matrix",matrix)
 
 grassArr = []
 grassEaterArr = []
@@ -132,5 +131,41 @@ function createObject() {
 
         }
     }
+    io.sockets.emit("send matrix",matrix)
 }
-io.sockets.emit("send matrix".matrix)
+
+function game() {
+    for (let i in grassArr) {
+        grassArr[i].mul()
+    }
+    for (let i in grassEaterArr) {
+        grassEaterArr[i].eat()
+    }
+
+    for (let i in cowArr) {
+        cowArr[i].eat()
+    }
+    for (let i in predatorArr) {
+        predatorArr[i].eat()
+    }
+    // for (let i in tuynArr) {
+    //         tuynArr[i].eat()
+    // }
+    for (let i in krakArr) {
+        krakArr[i].eat()
+    }
+    for (let i in jurArr) {
+        jurArr[i].eat()
+    }
+    for (let i in snakeArr) {
+        snakeArr[i].eat()
+    }
+    io.sockets.emit("send matrix",matrix)
+
+}
+
+setInterval(game,300)
+
+io.on("connection",function(){
+ createObject()
+})
