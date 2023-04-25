@@ -85,7 +85,7 @@ snakeArr = []
 
 
 Grass = require("./grass")
-Grasseater = require("./grassEater")
+GrassEater = require("./grassEater")
 Cow = require("./cow")
 Jur = require("./jur")
 Krak = require("./krak")

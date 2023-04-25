@@ -66,7 +66,7 @@ module.exports = class Krak extends LivingCreature{
 
     mul() {
         let emptyCell = this.chooseCell(1)
-        let newCell = emptyCell(Math.floor(Math.random() * emptyCell.length))
+        let newCell = emptyCell[Math.floor(Math.random() * emptyCell.length)]
         if (newCell) {
             let newX = newCell[0]
             let newY = newCell[1]
@@ -84,7 +84,7 @@ module.exports = class Krak extends LivingCreature{
 
     eat() {
         let emptyCell = this.chooseCell(1,2,3,4,7)
-        let newCell = emptyCell(Math.floor(Math.random() * emptyCell.length))
+        let newCell = emptyCell[Math.floor(Math.random() * emptyCell.length)]
 
         if (newCell) {
             this.energy += 2                                      
@@ -142,7 +142,7 @@ module.exports = class Krak extends LivingCreature{
 
     move() {
         let emptyCell = this.chooseCell(0)
-        let newCell = emptyCell(Math.floor(Math.random() * emptyCell.length))
+        let newCell = emptyCell[Math.floor(Math.random() * emptyCell.length)]
 
         if (newCell) {
             let newX = newCell[0]
