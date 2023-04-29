@@ -1,124 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-          
-canvas {
+        canvas {
             margin-left: 30%;
             margin-top: 4%;
         }
-        body{
-            background: rgb(5,8,45);
+
+        body {
+            background: rgb(5, 8, 45);
             background: linear-gradient(50deg, rgb(45, 101, 60) 10%, rgb(46, 231, 166) 50%, rgb(85, 183, 222) 90%);
         }
 
-        h1{
-           
-            font-style: italic;
-            color: black;
-            text-align: center;
-        }
-        h2{
-            
+        h1 {
+
             font-style: italic;
             color: black;
             text-align: center;
         }
 
-        .all_btns{
+        h2 {
+
+            font-style: italic;
+            color: black;
+            text-align: center;
+        }
+
+        .all_btns {
             display: flex;
-            justify-content: space-between ;
+            justify-content: space-between;
         }
 
         * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
 
-.buttons {
-    margin: 10%;
-    text-align: center;
-}
+        .buttons {
+            margin: 10%;
+            text-align: center;
+        }
 
-.btn-hover {
-    width: 200px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    margin: 20px;
-    height: 55px;
-    text-align:center;
-    border: none;
-    background-size: 300% 100%;
+        .btn-hover {
+            width: 200px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            margin: 20px;
+            height: 55px;
+            text-align: center;
+            border: none;
+            background-size: 300% 100%;
 
-    border-radius: 50px;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
+            border-radius: 50px;
+            moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
 
-.btn-hover:hover {
-    background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
+        .btn-hover:hover {
+            background-position: 100% 0;
+            moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
 
-.btn-hover:focus {
-    outline: none;
-}
+        .btn-hover:focus {
+            outline: none;
+        }
 
-.btn-hover.color-1 {
-    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
-    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
-}
-.btn-hover.color-2 {
-    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
-    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
-}
-.btn-hover.color-3 {
-    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
-    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
-}
-.btn-hover.color-4 {
-    background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
-    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
-}
-.btn-hover.color-5 {
-    background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
-    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
-}
-.btn-hover.color-6 {
-    background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
-    box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
-}
-.btn-hover.color-7 {
-    background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
-    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
-}
-.btn-hover.color-8 {
-    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
-    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
-}
-.btn-hover.color-9 {
-    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
-    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
-}
-.btn-hover.color-10 {
-        background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
-    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
-}
-.btn-hover.color-11 {
-       background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);  box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
-}
+        .btn-hover.color-1 {
+            background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+            box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+        }
+
+        .btn-hover.color-2 {
+            background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+            box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+        }
+
+        .btn-hover.color-3 {
+            background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+            box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+        }
+
+        .btn-hover.color-4 {
+            background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+            box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+        }
+
+        .btn-hover.color-5 {
+            background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+            box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+        }
+
+        .btn-hover.color-6 {
+            background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+            box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+        }
+
+        .btn-hover.color-7 {
+            background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+            box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+        }
+
+        .btn-hover.color-8 {
+            background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+            box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+        }
+
+        .btn-hover.color-9 {
+            background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+            box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+        }
+
+        .btn-hover.color-10 {
+            background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a, #FBB03B);
+            box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+        }
+
+        .btn-hover.color-11 {
+            background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);
+            box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+        }
 
 
 
@@ -126,32 +139,33 @@ canvas {
 
 
 
-Resources
+        /* Resources */
     </style>
 
     </style>
     <div class="all_btns">
-        <button  onclick = "AddGrass()"      class="btn-hover color-1" >Add Grass</button>
-        <button  onclick = "AddGrassEater()" class="btn-hover color-2">Add GrassEater </button>
-        <button  onclick = "AddPredator()"   class="btn-hover color-3">Add Predator</button>
-        <button  onclick = "AddCow()"        class="btn-hover color-4">Add Cow</button>
-        <button  onclick = "AddJur()"        class="btn-hover color-5">Add Jur</button>
-        <button  onclick = "AddKrak()"       class="btn-hover color-6">Add Krak</button>
-        <button  onclick = "AddSnake()"      class="btn-hover color-7">Add Snake</button>
-        <button  onclick = "KillAll()"       class="btn-hover color-8">Kill All</button>
-</div>
-<div class="exanak__btns">
-    <button onclick="Spring()"               class="btn-hover color-9">Spring</button>
-    <button onclick="Summer()"               class="btn-hover color-10">Summer</button>
-    <button onclick="Autumn()"               class="btn-hover color-11">Autumn</button>
-    <button onclick="Winter()"               class="btn-hover color-1">Winter</button>
-</div>
-    
-<button ><a href="information.html">INFO FOR GAME</a></button>
-</div>
+        <button onclick="AddGrass()" class="btn-hover color-1">Add Grass</button>
+        <button onclick="AddGrassEater()" class="btn-hover color-2">Add GrassEater </button>
+        <button onclick="AddPredator()" class="btn-hover color-3">Add Predator</button>
+        <button onclick="AddCow()" class="btn-hover color-4">Add Cow</button>
+        <button onclick="AddJur()" class="btn-hover color-5">Add Jur</button>
+        <button onclick="AddKrak()" class="btn-hover color-6">Add Krak</button>
+        <button onclick="AddSnake()" class="btn-hover color-7">Add Snake</button>
+        <button onclick="KillAll()" class="btn-hover color-8">Kill All</button>
+    </div>
+    <div class="exanak__btns">
+        <button onclick="Spring()" class="btn-hover color-9">Spring</button>
+        <button onclick="Summer()" class="btn-hover color-10">Summer</button>
+        <button onclick="Autumn()" class="btn-hover color-11">Autumn</button>
+        <button onclick="Winter()" class="btn-hover color-1">Winter</button>
+    </div>
 
-   
+    <button><a href="information.html">INFO FOR GAME</a></button>
+    </div>
+
+
 </head>
+
 <body>
     <h1>GAME OF LIFE</h1>
     <h2>Artur Ter-Petrosyan</h2>
@@ -159,4 +173,5 @@ Resources
     <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
